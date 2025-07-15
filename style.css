@@ -1,18 +1,22 @@
-/* Basic Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Nav */
+/* Navbar */
 nav {
   background-color: #0d6efd;
   color: white;
@@ -20,6 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -31,12 +36,18 @@ nav {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e9ff;
 }
 
 /* Hero */
@@ -44,6 +55,11 @@ nav {
   text-align: center;
   padding: 80px 20px;
   background-color: #e0ecff;
+  transition: background-color 0.5s ease;
+}
+
+.hero:hover {
+  background-color: #d6e6ff;
 }
 
 .hero h1 {
@@ -62,6 +78,7 @@ nav {
   color: white;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -81,9 +98,14 @@ nav {
   padding: 20px;
   margin: 10px;
   border-radius: 10px;
-  width: 250px;
+  width: 280px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 
 /* Footer */
@@ -92,4 +114,33 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .button {
+    width: 80%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
 }
