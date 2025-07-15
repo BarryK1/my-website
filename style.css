@@ -143,4 +143,16 @@ footer {
     display: block;
     margin: 0 auto;
   }
+  form input, form textarea {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  cursor: pointer;
+}
 }
