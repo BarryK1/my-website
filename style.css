@@ -8,7 +8,7 @@
 /* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fdfaff;
   color: #333;
   line-height: 1.6;
   display: flex;
@@ -19,41 +19,12 @@ body {
 /* Navbar */
 nav {
   background-color: #9966cc;
-}
-
-/* Links */
-.nav-links a {
   color: white;
-}
-.nav-links a:hover {
-  color: #e8d8ff;
-}
-
-/* Hero section */
-.hero {
-  background-color: #f1e8fb;
-}
-.hero:hover {
-  background-color: #e5d7f8;
-}
-.button {
-  background-color: #9966cc;
-}
-.button:hover {
-  background-color: #7a4fb2;
-}
-
-/* Scroll Effects & Cards */
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Form Button */
-form button {
-  background-color: #9966cc;
-}
-form button:hover {
-  background-color: #7a4fb2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -76,45 +47,48 @@ form button:hover {
 }
 
 .nav-links a:hover {
-  color: #d1e9ff;
+  color: #e6ccff;
 }
 
 /* Hero */
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background-color: #e0ecff;
+  background-color: #f3e6ff;
   transition: background-color 0.5s ease;
 }
 
 .hero:hover {
-  background-color: #d6e6ff;
+  background-color: #e8d4ff;
 }
 
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  color: #663399;
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 20px;
+  color: #6a0dad;
 }
 
 .button {
   padding: 12px 25px;
-  background-color: #0d6efd;
+  background-color: #9966cc;
   color: white;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  border: none;
 }
 
 .button:hover {
-  background-color: #0b5ed7;
+  background-color: #7a4fb2;
 }
 
-/* Features */
+/* Features section */
 .features {
   display: flex;
   justify-content: space-around;
@@ -128,24 +102,71 @@ form button:hover {
   margin: 10px;
   border-radius: 10px;
   width: 280px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(153, 102, 204, 0.2);
   text-align: center;
-  transition: transform 0.3s ease;
+  border: 2px solid #e3ccf7;
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
+  border-color: #9966cc;
+}
+
+.feature-card h3 {
+  color: #663399;
+}
+
+.feature-card p {
+  color: #5c2e91;
+}
+
+/* Contact Form */
+form input, form textarea {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #d9b3ff;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #9966cc;
+  box-shadow: 0 0 5px rgba(153, 102, 204, 0.3);
+}
+
+form button {
+  background-color: #9966cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #7a4fb2;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: #4b2c72;
   color: white;
   text-align: center;
   padding: 15px;
+  font-size: 0.9em;
 }
 
-/* Responsive */
+footer p {
+  color: #e9dfff;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -172,16 +193,4 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  form input, form textarea {
-  width: 90%;
-  max-width: 400px;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  cursor: pointer;
-}
 }
